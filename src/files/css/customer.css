@@ -1,0 +1,987 @@
+/*
+Styles for the Customer site (for logged-in users)
+Last update : Michael@Osaka 2012-11-02 yuucho update
+*/
+
+.content h3{
+	margin:0 0 10px;
+	font-size:14px;
+	color:#302f2e;
+}
+/* --- Vertical menu, displayed in the left-side column --- */
+#menu-vertical {
+	margin-top:2px;/*because of the picture use for grey tab */
+	padding:10px 10px 5px 10px;
+	background-color:#ffffff;
+	border:solid 1px #ECECEC;
+}
+#menu-vertical .menu1,
+#menu-vertical .menu2{
+	display:block;
+	text-decoration:none;
+}
+
+
+#menu-vertical .menu1,
+#menu-vertical .menu2 {
+	font-weight:bold;
+	margin-bottom:5px;
+	position:relative;
+}
+#menu-vertical .menu1{
+	margin-bottom:8px;
+	text-align:center;
+}
+
+	
+#menu-vertical .menu1{
+	padding:8px 0 8px 10px;
+	color:black;
+	font-size:13px;
+	
+	background: #ffe610; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffe610 0%, #ffaf07 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe610), color-stop(100%,#ffaf07)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffe610 0%,#ffaf07 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffe610 0%,#ffaf07 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffe610 0%,#ffaf07 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe610', endColorstr='#ffaf07',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ffe610 0%,#ffaf07 100%); /* W3C */
+}
+#menu-vertical a.home{
+	padding:8px 0 8px 10px;
+	color:black;
+	
+	background: #ff9802; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff9802 0%, #f46903 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9802), color-stop(100%,#f46903)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff9802 0%,#f46903 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff9802 0%,#f46903 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ff9802 0%,#f46903 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9802', endColorstr='#f46903',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ff9802 0%,#f46903 100%); /* W3C */
+}
+
+#menu-vertical .menu2{
+	color:#302F2E;
+	font-size:13px;
+	text-align:left;
+	padding:4px 0 4px 20px;
+	background-color:#dcdcdb;
+	background-image:url('images/bullet.png');
+	background-repeat:no-repeat;
+	background-position:8px 8px;
+}
+#menu-vertical .selected{
+	background-color:#424242;
+	color:white;
+	cursor:default;
+	
+}
+#menu-vertical .menu2.selected,
+#menu-vertical .menu2:hover {
+	background-position:8px -33px;
+}
+
+/* We use a span element because the is already a background (gradient) on the parent element */
+.icon-home{
+	width:19px;
+	height:19px;
+	position:absolute;
+	top:5px;
+	left:10px;
+	background-image:url('images/home.png');
+	}
+.icon-triangle{
+	width:14px;
+	height:13px;
+	position:absolute;
+	top:8px;
+	left:10px;
+	background-image:url('images/menu-triangle.png');
+	}	
+
+/* end of the vertical menu */
+
+/* Font attributes */ 
+h2.block-grey{
+    background-color: #424242;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    padding: 2px 5px;
+}
+
+/*New tab used in all Customer pages*/
+.customer-tab-wrapper1{
+	width:572px;
+	height:36px;
+	float:left;
+	overflow:hidden;
+}
+
+.customer-tab-wrapper2{
+	margin-right:-572px;
+	height:36px;
+}
+.customer-tab-part1,.customer-tab-part2{
+	float:left;
+	height:31px;
+	padding:10px 0 0 0;
+	line-height:30px;
+	}
+.customer-tab-part1 {
+	background:url('images/tabs/customer_tab_part1.gif') no-repeat;
+	background-position: 0px 0;
+	padding:5px 15px 0;
+	color:#424242;
+	font-size:16px;
+	font-weight:bold;
+}
+.customer-tab-part2{
+	background:url('images/tabs/customer_tab_part2.gif') no-repeat;
+	width:570px;
+}
+.customer-tab-part3{
+	width:14px;
+	height:36px;
+	float:left;
+	background:url('images/tabs/customer_tab_part3.gif') no-repeat;
+}
+
+/* The grey tab that uses 3 images (top / middle / content)　*/	
+	
+.tab-grey .title{
+	background:transparent url('images/tabs/tab-grey-top.gif') no-repeat;
+	height:26px;
+	padding:10px 0px 0px 15px;
+	color:#424242;
+	font-size:16px;
+	font-weight:bold;
+	}
+.tab-grey .middle{
+	background:transparent url('images/tabs/tab-grey-middle.gif') repeat-y;
+/*	padding:0px 20px 10px 20px;*/
+	padding:0px 15px 0;
+	}
+.tab-grey .bottom{
+	background:transparent url('images/tabs/tab-grey-bottom.gif') no-repeat;
+	height:19px;
+	}
+	
+/* Inside the grey tab, the yellow block used to display content　*/		
+.tab-grey .middle .content{
+	background-color:white;
+	margin:10px 0 0;
+	padding:10px 10px;
+	border-radius: 6px 6px 6px 6px;
+}		
+.tab-grey .history{
+	color:#424242;
+	font-size:9px;	
+}
+/* The tab content */
+.tab-grey p{
+	margin-bottom: 5px;
+}
+
+
+/* Text with a floating action button on the right (new remittance request)*/
+.tab-grey .text-with-right-button{
+	padding-right: 120px;
+}
+
+/* the tables used to display data such as list of remittances */
+table.data-view-list{
+	border-spacing:0px;
+	width:100%;
+}
+
+table.data-view-list th{
+	background-color:#424242;
+	color:white;
+	padding: 8px 10px 8px 10px;
+	font-size:14px;
+	text-align:left;
+	border-right:solid 1px white;
+}
+table.data-view-list td{
+	padding: 5px 10px 5px 10px;
+	border-right:solid 1px #424242;
+}
+
+/* hover event : highlight the whole line */
+table.clickable td{
+	cursor:pointer;	
+}
+table.data-view-list tr.hover td{
+	background-color:#E9B41B;
+	color:black;
+}
+table.data-view-list td.last,
+.tab-grey table.data-view-list th.last{
+	border-right-style:none;
+}
+
+
+.button{
+	padding: 5px 30px;
+	cursor:pointer;
+}
+.confirm-buttons{
+	text-align:center;
+	margin:0;
+	padding:20px 0 10px;	
+	position:relative;/* needed to use position:absolute for the spinner */
+}
+
+
+.confirm-buttons .ajax-spinner{
+	position:absolute;
+	top:15px;
+	right:0;
+}
+
+div.confirm-buttons input,.confirm-buttons .button{
+	margin-right:20px;
+	}	
+.right-arrow{
+	background-color:#424242;
+	color:white;
+	font-weight:bold;
+	padding: 8px 10px 8px 10px;
+	margin-right:120px;
+	font-size:14px;
+	text-align:left;
+	background:#424242 url("images/black-arrow.gif") no-repeat right;
+	}
+
+/* The container used for table display records details (read-only)*/
+.data-view-details{
+    background-color: #fbf3d2;
+	padding:5px 10px;
+	margin-bottom:10px;
+}
+
+
+.data-view-details table td,
+.data-view-details table th,
+.data-edit table td,
+.data-edit table th
+{
+	padding:5px 0px;
+}
+
+
+/* for cells that contain a field */
+.data-edit td.field{
+	padding:5px 0;
+}
+
+.tab-grey table{
+	width:100%;
+}
+
+.data-view-details th,
+.data-edit th{
+	text-align:left;
+	width:190px;
+	font-weight:normal;
+	color:black;
+	/*vertical-align:baseline	*/
+	}
+input.txt{
+	border:solid 1px orange;
+	padding:2px 4px;
+	color:black;
+	width: 220px;
+}
+
+select{
+	border:solid 1px orange;
+	padding:2px 2px 2px 0;	
+	width:230px;
+}
+
+div.data-edit select.years,div.data-edit select.months,div.data-edit select.days{
+	width:auto;
+}	
+
+/* For the action buttons inserted in table cells, we reduce the padding */
+div.data-edit td .action1,div.data-edit td .action2{
+	padding: 1px 10px;
+	margin:0 2px;
+}
+
+td.amount{
+	text-align:right;
+}
+
+/* end of table.data-view-details */
+
+/* div used for the forms */
+div.data-edit{
+    margin: 0 0 10px;
+	padding: 5px 0;
+}
+div.input-example{
+	font-size:10px;
+	}
+/* end of elements related to forms*/
+
+	
+	
+/* For the password change/reset top page */
+body.password-change div.data-edit table th{
+	width: 220px;
+}
+div.block-password-change{
+	width:225px;
+	margin:30px 0px;
+	padding:10px;
+	border:solid 1px #c6c5c1;
+
+}
+.block-password-change .action1,
+.block-half .action1
+{
+	margin:10px 0px;
+	padding: 5px 0px;
+	width:100%;
+	display:block;
+}
+.block-half{
+	width:225px;
+	padding:10px;	
+}
+
+/* For the termination : the buttons have to be in the right bottom corner*/
+div.min-height{
+	min-height:320px;
+	position:relative;
+	}
+div.min-height div.buttons{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	}
+div.min-height div.buttons input{	
+	margin-left:20px;
+}
+
+/* Contains the input field for transaction password */
+div.transaction-password{
+	background-color:#E9B41B;
+	padding:10px;
+	color:black;
+	font-weight:bold;
+	margin-top:10px;
+}
+div.transaction-password input{	
+	margin-left:50px;
+}
+
+/* The radio buttons of the request conformation page (save this beneficiary ?)*/
+div.radio{
+	padding:10px;
+}
+div.selected{
+	background-color:#dfdad1;
+}
+
+div.radio label {
+/*color: black;/*#E28619;*/
+font-size: 16px;
+font-weight: bold;
+padding-left: 5px;
+}
+p.question{
+	font-weight:bold;
+	font-size:16px;
+	}
+
+/* userd to ask aquestion (save this beneficiary ? for example), followed by yes/no buttons */
+div.question{
+	background-color: #e3e3db;
+    margin: 5px 0 10px 0;
+	padding:10px;
+}	
+
+hr{
+	color:#DCDCDB;
+	border-style:solid;
+	margin:20px 0px;
+	}
+	
+.small{
+	font-size:12px;
+}
+
+/* --- Username displayed in the header ---*/
+#userInfo {
+	position:absolute;
+	top:58px;
+	right:5px;
+}
+
+/* Logout button, in the header */
+a#logout{
+	font-size:12px;
+	text-decoration:none;
+	font-weight:normal;
+	color:white;
+	display:block;
+	background-color:#424242;
+	padding:2px 0px;
+	width:160px;
+	text-align:center;
+	margin:10px 0px 5px 5px;
+	}
+/* Form validation */	
+input.error,div.data-edit input.error, div.data-edit select.error,span.error{
+	border: solid 1px #ed4136;
+}
+
+/* Remit Request Field Validation plugin	*/
+input.field-validation-error, select.field-validation-error, span.field-validation-error{
+	border: solid 1px #ed4136;
+}
+td.field-validation-error,
+div.field-validation-error{
+	background: url("images/error_icon.png");	
+	background-repeat:no-repeat;
+}
+.comment.field-validation-error{
+	background-position:5px 8px;
+}
+.transaction-password .field-validation-error{
+	background-position:90% 2px;
+}
+label.field-validation-error{
+    color: #ED4136;
+    padding: 0 0 0 0;
+	margin:0 0 0 0;
+	font-size:12px;	
+	display:block;
+}
+td.field{
+	width:230px;
+}
+	
+/* Span used for radio-buttons, postal code plug-in*/
+span.error {
+    padding: 3px;
+}	
+div.data-edit table{
+	width:100%;
+}
+div.data-edit td.comment{
+	padding-left:25px;/*padding-left is required to avoid overlapping the error icon*/
+	font-size:12px;
+}	
+label.error{
+    background: url("images/error_icon.png") no-repeat scroll 0 5px transparent;
+    color: #ED4136;
+    padding: 6px 0 0 22px;
+	margin:0 0 0 5px;
+	font-size:12px;
+}
+
+/* calculator (in the remittance request )*/
+
+div.data-edit table.calculator th{
+	padding:0px;
+	width:auto;
+	vertical-align:middle;
+	font-weight:bold;
+	}
+div.data-edit table.calculator th.yen{
+	text-align:left;
+}	
+div.data-edit table.calculator .currency-container{
+	text-align:right;
+}
+
+div.data-edit table.calculator td{
+	position:relative;
+	padding:0;
+	}	
+table.calculator .currency{	
+	margin-right:10px;
+	left:0px;
+	top:0px;
+	font-size:18px;
+	font-weight:bold;
+}
+table.calculator input{
+	width:120px;/*input field of the calculator*/
+}
+.calc-error{
+	background-color:#e35d00;
+	margin-top:10px;
+	color:white;
+	padding: 5px 10px;
+	font-weight:bold;
+	display:none;
+	}
+.error-msg{
+	background-color:#e35d00;
+	color:white;
+	padding: 5px 10px;
+	font-weight:bold;
+	margin: 10px 0;
+	}
+.error-msg a{
+	color:white;
+}		
+div.remit-details{
+	display:none;
+}	
+div.remit-details table th{
+	width:300px;
+}
+.remit-details table td.amount,
+.block-amount-to-deposit td.amount
+{
+	text-align:right;
+	color:black;
+}
+
+div.remit-details table span.currency {
+    font-size: 12px;
+    padding: 0;
+}
+.block-amount-to-deposit{
+	background-color:#fbaf3f;
+}
+.block-amount-to-deposit th{
+	text-align:left;
+}
+.block-amount-to-deposit{
+	font-weight:bold;
+}
+.block-amount-to-deposit{
+	padding: 5px 10px;
+}
+.block-amount-to-deposit td{
+	padding: 5px 0;
+}
+.block-amount-to-deposit .amount,.block-amount-to-deposit label{
+	font-weight:bold;
+}
+tr#tr-next-balance th{
+	text-align: left;
+	font-weight:normal;
+	
+}
+.remit-details .data-view-details{
+	margin-bottom: 5px;
+}
+.block-balance{
+	float:right;
+	padding:3px 10px;
+	background-color:#FBF3D2;
+	margin-bottom:2px;
+}
+#transfer-amount-block .data-edit{
+	clear:right;
+}
+ul.calcNotes{
+	font-size: 12px;
+	padding-left:20px;
+	margin:10px 0;
+}
+
+/* end of the calculator */
+
+/* For the big buttons of the remittance history page */
+.buttons-multiline{
+	overflow:auto;
+	margin:25px 20px;
+	}
+.buttons-multiline .button{
+	width:200px;
+	height:32px;
+	padding: 5px 5px;
+}
+.buttons-multiline a.one-line{
+	padding:5px 10px;
+	height:16px;
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+
+/* message on Customer home page */
+.message{
+	background-color: #FBF3D2;
+    margin: 10px 0 15px;
+	padding:10px;
+}
+.message .date{
+	font-weight:bold;
+}
+
+/* email setting page */
+.mail-setting-block .data-edit td{
+	padding: 5px 2px 5px 2px;	
+}
+
+.mail-setting-block .data-edit .mail-status-1,
+.mail-setting-block .data-edit .mail-status-2{
+	font-size:12px;
+	font-weight:bold;
+	text-align:right;	
+	padding-right:10px;
+}
+
+
+.mail-status-1{
+	color:#3A8104;
+}
+.mail-status-2{
+	color:#F46903;
+}
+.mail-setting-block{
+	margin-top:10px;
+}
+.mail-setting-block .data-edit th{
+	width:150px;	
+}
+
+.mail-setting-block .buttons{
+	text-align:center;
+}
+
+.mail-setting-block .data-edit{
+	padding:10px;
+}
+.mail-setting-block .ajax-result-ok{
+	margin-bottom:0;
+}
+.mail-setting-block .message-error{
+	color: #F46903;
+	font-weight:bold;
+	margin: 5px 20px;
+	padding:5px 0;
+	display:none;
+}
+span.radio-buttons label {
+    padding-right: 10px;
+}
+
+/* 
+-------------------
+Customer home page / Campains
+-------------------
+
+*/
+.campains-wrapper{
+	width:580px;
+}
+.campain{
+	margin:20px 2px;
+	padding:15px 20px;
+	background-color:white;
+
+}
+.campain p{
+	font-weight:normal;
+	font-size:14px;
+	margin-bottom:20px;
+}
+.campain .orange-block{
+	background-color: #FeF3D2;
+	padding:10px;
+	position:relative;
+}
+.campain .content{
+	margin-left:240px;
+}
+.campain img{
+	margin: -10px;
+	position:absolute;
+}
+.campain img.brastel-card{
+	margin: -20px 25px;
+	position:absolute;
+}
+
+.campain .title{
+	color:#E35D00;
+   font-size: 20px;
+   margin:0 0 5px;
+   font-weight:normal;
+   
+}
+.campain .link{
+	text-align:center;
+	margin:10px 0;
+}
+.popup{
+	width:400px;
+	background-color:white;
+	padding: 15px;
+}
+.popup label{
+	/*font-weight:bold;*/
+	font-size:12px;
+	vertical-align:top;
+}
+.card-registration .data-edit{
+	width:350px;
+	margin:0 auto;
+}
+.card-registration form th{
+	vertical-align:top;
+}
+.card-registration .data-edit th{
+/*	width:100px;*/
+	text-align:right;
+	padding-right:10px;
+	font-weight:bold;
+}
+.card-registration td.buttons{
+	padding-top:10px;
+}
+.card-registration input{
+	font-size:24px;
+}
+.card-registration td.access-code input{
+	width:120px;
+	padding:2px 5px;
+}
+.card-registration td.pin input{
+	width:60px;
+	padding:2px 5px;
+}
+.card-registration td.pin,{
+	width:65px;
+}
+
+.card-registration .label-pin,.card-registration .label-access-code{
+	padding-top:0;
+	text-align:center;
+}
+.card-registration tr.line1 td,.card-registration tr.line1 th{
+	padding: 10px 10px 5px 0;
+}
+.card-registration tr.line2 td{
+	padding:0 10px 10px;
+}
+#brastel-card-field-error{
+	margin-left:100px;
+}
+#brastel-card-field-error div{
+	margin-top:5px;
+}
+
+.popup .title{
+	font-size:20px;
+	color: #E35D00;
+	margin:0 0 10px;
+	font-style:italic;
+	text-align:center;
+	font-weight:bold;
+}
+.popup p{
+	margin:15px 0;
+}
+.popup p.notes{
+	font-size:11px;
+	font-weight:bold;
+	margin: 20px 0 0;
+}
+.popup p.notes,.popup ul.notes li{
+	font-size:11px;
+}
+.popup ul.notes{
+	padding:0 20px;
+	margin: 5px 0;
+}
+
+/* Introduce a friend popup*/
+.introduce-friend th{
+	text-align:right;
+	font-size:14px;
+}
+.introduce-friend table{
+	width:100%;
+}
+.introduce-friend td,.introduce-friend th{
+	padding: 2px 5px;
+
+	vertical-align:top;
+}
+.introduce-friend input,.introduce-friend textarea{
+	width:250px;
+}
+
+#friends-history{
+	margin-top:10px;
+}
+#button-show-history{
+	margin:10px 0; 
+}
+
+/* 
+End of customer home page
+*/
+
+/* Remit request final confirmation screen */
+table.remit-virtual-account{
+	margin:10px 0;	
+	width:auto;
+}
+.remit-virtual-account th{
+	font-weight: normal;
+	text-align:left;
+	padding-right:30px;
+}
+
+
+/* accounts to deposit page */
+.data-view-details .balance th,.data-view-details .balance td{
+	vertical-align:middle;
+	height:30px;
+}
+
+.loading {
+    margin: 20px 0;
+    text-align: center;
+}
+.remit-request .loading{
+	margin: 200px 0;
+}
+.virtual-account .balance-block{
+	margin-bottom:0;
+}
+/* warning block added at end of the remittance history list */
+.warning{
+	background-color:#F5F5F5;
+	font-size:12px;
+	font-weight:normal;
+	margin: 5px 0 0 5px;
+	padding: 10px	
+}
+hr.spacer{
+	clear:both;
+	visibility:hidden;
+	margin:0;
+	border:0;
+}
+
+/* for jquery ui autocomplete compoment 2012-04-12 */
+.ui-autocomplete a{
+	font-weight:normal;
+}
+
+p.information{
+	background-color:#FBF3D2;
+	color: #ed4136;
+	padding:20px 20px 20px 80px;
+	background: #FCF7E3 url("images/red-warning-40x35.png") no-repeat 20px 25px;
+	margin-bottom:20px;
+}
+
+/* edit personal data - postal bank */
+.data-edit table.postal-numbers tr th,
+.data-edit table.postal-numbers tr td{
+	padding: 0 0 5px;
+}
+a.action1{
+	display:inline-block;/*added to display correctly the yellow gradient in IE*/
+}
+
+.margin-top{
+	margin-top:10px;/*used to add a margin to some paragraphs, in the Accounts to deposit page for example */
+}
+
+.remit-details .letter{/* used in the remittance form and the history*/
+	width:25px;
+	text-align:left;
+	color: #666666;
+}
+tr.exchange-rate-detail td.amount,tr.exchange-rate-detail th{/*for preferential and regular rates in the remittance form*/
+	color:#666666;
+}
+
+/*Accounts to deposit page*/
+.half-width{
+	width:260px;
+}
+.half-width.right{
+	margin-left:10px;
+}
+.half-width p{
+	margin:10px 0;
+}
+.action1.big{/*big buttons used for "EASY TRANSFERS" and "STANDARD TRANSFER"*/
+	width:250px;
+	padding: 10px 0;
+}
+p.intro{
+	margin-bottom:10px;
+}
+p.link-accounts-to-desposit{/*remittance request, last block*/
+	margin-top:30px;
+	font-size:12px;
+}
+.block-account tr.recipient-name td,.block-account tr.recipient-name th{
+	border-bottom: solid 1px #B5B7B9;
+	padding-bottom:10px;
+}
+.block-account tr.first td,.block-account tr.first th{
+	padding-top:10px;
+}
+.account-actions{
+	border-top: solid 1px #B5B7B9;
+	padding: 10px 0;	
+}
+.no-easy-account{/*displayed when the user has 0 easy account*/
+	padding: 50px 0;
+	text-align: center;
+}
+/*block used in remittance request and edit recipient forms*/
+#philippines-link-block{
+	text-align:center;
+	display:none;
+	margin-bottom:25px;
+	
+}
+#philippines-link-block a{
+	font-size:12px;	
+}
+
+#philippines-dialog{
+	width:500px;
+}
+#philippines-dialog h3{
+	border-bottom: solid 1px #E35D00;
+	line-height:30px;
+	margin-bottom:15px;
+}
+#philippines-dialog p{
+	margin-bottom:20px;
+}
+	
+.lastname{
+	font-weight: bold;
+}
+
+/*Following code normalizes button appearance (from normalize.css, html5boilerplate)*/
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+/*end of normalize code*/

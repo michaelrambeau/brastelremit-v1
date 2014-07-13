@@ -1,0 +1,664 @@
+---
+title: Simulator
+layout: default
+js: ['common/imt_format_number.js','common/remit_calculator.js','common/beneficiary_form.js','home/home_calculator.js']
+---
+
+<div id="main-wrapper">
+      <div class="centered"><select id="allDeliveryMethods" style="display:none;"><option value="1" xmlns="http://www.w3.org/1999/xhtml">Bank Account Deposit</option>
+          <option value="2" xmlns="http://www.w3.org/1999/xhtml">Agent Collect Point</option>
+          <option value="3" xmlns="http://www.w3.org/1999/xhtml">Home Delivery</option>
+          <option value="4" xmlns="http://www.w3.org/1999/xhtml">Card Reloading</option>
+        </select>
+      <script>
+		var pageData={};
+		
+		pageData.maxAmountToRemit = '500000.000000';
+		
+		pageData.fees=[];
+		
+			pageData.fees.push({
+				'countryCode':'ALL',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'30000.00',				
+				'fee':'880.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'ALL',										  
+				'lowerLimit':'30001.00',
+				'upperLimit':'100000.00',				
+				'fee':'1480.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'ALL',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'500000.00',				
+				'fee':'1680.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AM',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AM',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AM',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AM',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AZ',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AZ',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AZ',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'AZ',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'GE',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'GE',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'GE',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'GE',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'KZ',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'KZ',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'KZ',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'KZ',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'MD',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'MD',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'MD',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'MD',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'MM',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'500000.00',				
+				'fee':'1680.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'RU',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'RU',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'RU',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'RU',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'S1',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'S1',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'S1',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'S1',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'TJ',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'TJ',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'TJ',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'TJ',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'UA',										  
+				'lowerLimit':'0.00',
+				'upperLimit':'10000.00',				
+				'fee':'1000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'UA',										  
+				'lowerLimit':'10001.00',
+				'upperLimit':'100000.00',				
+				'fee':'2500.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'UA',										  
+				'lowerLimit':'100001.00',
+				'upperLimit':'300000.00',				
+				'fee':'5000.00'								
+			})
+		
+			pageData.fees.push({
+				'countryCode':'UA',										  
+				'lowerLimit':'300001.00',
+				'upperLimit':'500000.00',				
+				'fee':'8000.00'								
+			})
+		
+		
+		pageData.deliveryMethods=[];
+		var methods=[];
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['AM']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['AZ']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['BD']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['GE']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+			pageData.deliveryMethods['IN']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+			pageData.deliveryMethods['ID']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['KZ']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+			pageData.deliveryMethods['MY']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['MD']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['MM']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['NP']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['PH']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['RU']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+			pageData.deliveryMethods['SG']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['S1']=methods;
+		
+			methods=[];
+			
+				methods.push('1');
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['LK']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['TJ']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+			pageData.deliveryMethods['UA']=methods;
+		
+			methods=[];
+			
+				methods.push('2');
+			
+				methods.push('3');
+			
+			pageData.deliveryMethods['VN']=methods;
+		
+		
+		//User data
+		pageData.rateType = '';
+		pageData.userBalance = '';
+		pageData.nbPendingRequest = '';
+		pageData.maxReached = '';
+
+		</script><div id="one-column-content" class="calculator-page">
+          <div class="whitebox ui-corner-all ui-shadow">
+            <h1>Simulator</h1>
+            <table class="steps" cellpadding="0">
+              <tr>
+                <th class="step1" colspan="2">1) Choose destination:</th>
+                <th class="step2" colspan="2">2) Choose delivery method:</th>
+                <th class="step3">3) Enter amount:</th>
+              </tr>
+              <tr>
+                <td id="cell1" class="step step1 ui-corner-all">
+                  <div class="yellow-block ui-corner-all">
+                    <select name="countryCode" id="selectCountry" class="required">
+                      <option value="">Select Country</option>
+                      <option value="AM">Armenia</option>
+                      <option value="AZ">Azerbaijan</option>
+                      <option value="BD">Bangladesh</option>
+                      <option value="GE">Georgia</option>
+                      <option value="IN">India</option>
+                      <option value="ID">Indonesia</option>
+                      <option value="KZ">Kazakhstan</option>
+                      <option value="MY">Malaysia</option>
+                      <option value="MD">Moldova</option>
+                      <option value="MM">Myanmar</option>
+                      <option value="NP">Nepal</option>
+                      <option value="PH">Philippines</option>
+                      <option value="RU">Russian Federation</option>
+                      <option value="SG">Singapore</option>
+                      <option value="S1">South Ossetia</option>
+                      <option value="LK">Sri Lanka</option>
+                      <option value="TJ">Tajikistan</option>
+                      <option value="UA">Ukraine</option>
+                      <option value="VN">Vietnam</option>
+                    </select>
+                    <div class="currency">Currency:<br />
+                      <div class="currency-translation" id="currency-AM">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-AZ">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-BD">BDT (Bangladeshi Taka)</div>
+                      <div class="currency-translation" id="currency-GE">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-IN">INR (Indian Rupee)</div>
+                      <div class="currency-translation" id="currency-ID">IDR (Indonesian Rupiah)</div>
+                      <div class="currency-translation" id="currency-KZ">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-MY">MYR (Malaysian Ringgit)</div>
+                      <div class="currency-translation" id="currency-MD">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-MM">MMK (Burmese Kyat)</div>
+                      <div class="currency-translation" id="currency-NP">NPR (Nepalese Rupee)</div>
+                      <div class="currency-translation" id="currency-PH">PHP (Philippine Peso)</div>
+                      <div class="currency-translation" id="currency-RU">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-SG">SGD (Singapore Dollar)</div>
+                      <div class="currency-translation" id="currency-S1">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-LK">LKR (Sri Lankan Rupee)</div>
+                      <div class="currency-translation" id="currency-TJ">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-UA">USD (United States Dollar)</div>
+                      <div class="currency-translation" id="currency-VN">USD (United States Dollar)</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="arrow step2"> </td>
+                <td id="cell2" class="step step2 ui-corner-all">
+                  <div class="yellow-block delivery-block ui-corner-all js-field-container">
+                    <select name="deliveryMethod" id="selectDeliveryMethod" class="">
+                      <option value="">Select Delivery Method...</option>
+                    </select>
+                    <div id="delivery-time-container" style="display:none;">Approx. delivery time:<br />
+                      <span class="delivery-time delivery-method1">1 to 3 business days</span>
+                      <span class="delivery-time delivery-method2">averagely 1 hour</span>
+                      <span class="delivery-time delivery-method3">1 to 2 business days</span>
+                    </div>
+                  </div>
+                  <div class="yellow-block ui-corner-all js-field-container">
+                    <select id="selectBank" class="">
+                      <option value="">Select bank name/Select agent name/Select delivery area</option>
+                    </select>
+                    <div class="branch-container js-field-container">
+                      <select name="selectBankBranchCode" id="selectBankBranch">
+                        <option value="">Select Bank Branch</option>
+                      </select>
+                      <input id="autocomplete-bank-branches" style="display:none;" name="autocompleteBankBranch" placeHolder="Enter the branch name" />
+                    </div>
+                  </div>
+                </td>
+                <td class="arrow step3"> </td>
+                <td id="cell3" class="step step3 ui-corner-all">
+                  <div class="yellow-block ui-corner-all" style="display:;">
+                    <select id="inputMethod">
+                      <option value="">Please select</option>
+                      <option value="1">Sending amount (in yen)</option>
+                      <option value="2">Delivery amount</option>
+                    </select>
+                    <div class="enter-deposit" style="display:none;">
+                      <span class="yen-mark">&#165;</span>
+                      <input type="text" class="amount numbersOnly" id="yenAmount" maxlength="9" value="" />
+                    </div>
+                    <div class="enter-delivery" style="display:none;">
+                      <span class="foreign-symbol">?</span>
+                      <input type="text" class="amount numbersWithDecimals" id="fgnAmount" value="" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <img src="/GenericFiles/imt/img/external/loading.gif" alt="loading..." class="loading" />
+            <div class="calc-error ui-corner-all">?</div>
+            <div class="remit-details" style="display:none;">
+              <table class="calculator-results">
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th class="regular-column">Regular<br/>exchange rates</th>
+                    <th class="special-column">Special<br/>exchange rates</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="enter-deposit">
+                    <th>
+                      <span>(a) </span>Sending amount</th>
+                    <td class="regular-column">
+                      <span class="remittanceAmountYenRegular">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="remittanceAmountYenSpecial">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-deposit">
+                    <th>
+                      <span>(b) </span>Transfer fee</th>
+                    <td class="regular-column">
+                      <span class="remittanceFeeValue">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="remittanceFeeValue">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-deposit">
+                    <th>
+                      <span>(c) </span>Amount to deposit</th>
+                    <td class="regular-column">
+                      <span class="depositAmountValue">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="depositAmountValue">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-deposit">
+                    <th>
+                      <span>(d) </span>Exchange rate</th>
+                    <td class="regular-column">
+                      <span class="foreign-symbol">$</span>
+                      <span class="currenciesPerYenRegular">0</span>/¥</td>
+                    <td class="special-column">
+                      <span class="foreign-symbol">$</span>
+                      <span class="currenciesPerYenSpecial">0</span>/¥</td>
+                  </tr>
+                  <tr class="enter-deposit">
+                    <th>
+                      <span>(e) </span>Delivery amount (a / d)</th>
+                    <td class="regular-column">
+                      <span class="foreign-symbol">?</span>
+                      <span class="deliveryAmountRegular">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="foreign-symbol">?</span>
+                      <span class="deliveryAmountSpecial">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-delivery">
+                    <th>
+                      <span>(a) </span>Delivery amount</th>
+                    <td class="regular-column">
+                      <span class="foreign-symbol">?</span>
+                      <span class="deliveryAmountRegular">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="foreign-symbol">?</span>
+                      <span class="deliveryAmountSpecial">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-delivery">
+                    <th>
+                      <span>(b) </span>Exchange rate</th>
+                    <td class="regular-column">
+                      <span class="foreign-symbol">$</span>
+                      <span class="currenciesPerYenRegular">0</span>/¥</td>
+                    <td class="special-column">
+                      <span class="foreign-symbol">$</span>
+                      <span class="currenciesPerYenSpecial">0</span>/¥</td>
+                  </tr>
+                  <tr class="enter-delivery">
+                    <th>
+                      <span>(c) </span>Sending amount (a / b)</th>
+                    <td class="regular-column">
+                      <span class="remittanceAmountYenRegular">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="remittanceAmountYenSpecial">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-delivery">
+                    <th>
+                      <span>(d) </span>Transfer fee</th>
+                    <td class="regular-column">
+                      <span class="remittanceFeeValue">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="remittanceFeeValue">0</span>
+                    </td>
+                  </tr>
+                  <tr class="enter-delivery">
+                    <th>
+                      <span>(e) </span>Amount to deposit (c + d)</th>
+                    <td class="regular-column">
+                      <span class="depositAmountValueRegular">0</span>
+                    </td>
+                    <td class="special-column">
+                      <span class="depositAmountValueSpecial">0</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 class="important">IMPORTANT</h3>
+              <ul class="notes">
+                <li>The exchange rate is based on today's rate of the transfer amount from Yen to US dollars converted into the local currency. The exchange rate will be applied on the date and time of when the remittance is processed, and the rate indicated above is for reference only. Note that for deposits made with Japan Post Bank deposit cards after 11:30 am, the remittance request will be processed on the next business day. Therefore, the exchange rate applied will be of the process date and time.</li>
+                <li>The delivery amount is also for reference only. The amount may differ depending on the date the remittance is processed and additional local fees and taxes that may apply.</li>
+                <li>The approximate delivery time may take longer depending on holidays, in Japan and at the destination.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

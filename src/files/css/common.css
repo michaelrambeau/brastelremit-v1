@@ -1,0 +1,468 @@
+/* 
+CSS files used by all IMT pages : registration, home and customer pages
+Last update : Michel @Osaka 2012-11-20 placeholder font color
+*/
+
+/* ----------- Layout --------- */
+body{
+	background-image:url('images/content-background.png');
+	display:block;
+	overflow-y:scroll;
+	background-color:#eeece5;/*#DCD9D0;
+	/* following instructions are needed to have a fixed footer that does not overlap content */
+	min-height: 100%;
+	position: absolute;
+	width:100%;
+
+}
+
+#header {
+	position:relative;
+	height:165px;
+	background-color:white;
+
+}
+#header .banner{
+	width:100%;
+	height:100%;
+	position:relative;
+	background: transparent url('images/header-background960x165.jpg') no-repeat center;	
+}
+
+#header img.logo {
+    left: 0;
+    position: absolute;
+    top: 50px;
+}
+
+#header .centered{
+	height:100%;
+	position:relative;
+}
+
+/* The columnn on the left side, used for the vertical menu */
+#side{
+	float:left;		
+	width:240px;
+}
+
+/* The class used to center content horizontally */
+.centered{
+	width:826px;/* 240px (#side) +10px (margin) + 576px (the pictures in the home page) */
+	margin:0 auto;
+}
+
+/* The container for the left column (#side) and the main content (#main-content) */
+#main-wrapper{
+	margin-bottom: 110px;/*needed otherwise the fixed footer will overwrite content */	
+}
+.loggedin-user .centered{
+	width: 836px;/* 240px (#side) +10px (margin) + 586px (the grey tab) */
+}
+.home-main #main-wrapper .centered{
+	position:relative;
+	margin-top:-15px;/* To make the inner container overlap the header, a negative margin-top is used*/
+}
+/* ...and un bigger overleap for loggedin pages (since there is no horizontal menu)  */
+.loggedin-user #main-wrapper .centered{
+	position:relative;
+	margin-top:-60px;	
+}
+
+.home-main #main-content {	
+	margin-left:250px;
+	position:relative;
+}
+.loggedin-user #main-content {	
+	margin-left:250px;
+}
+/* a block used to show yellow background on the upper right corner */
+#top-right-corner{
+	width:50%;
+	position:absolute;
+/*	z-index:-1;*/
+	right:0px;
+	height:165px;
+	
+	background: #ffd400; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffd400 0%, #fed600 29%, #fdd200 30%, #fea700 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd400), color-stop(29%,#fed600), color-stop(30%,#fdd200), color-stop(100%,#fea700)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffd400 0%,#fed600 29%,#fdd200 30%,#fea700 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffd400 0%,#fed600 29%,#fdd200 30%,#fea700 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffd400 0%,#fed600 29%,#fdd200 30%,#fea700 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffd400 0%,#fed600 29%,#fdd200 30%,#fea700 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd400', endColorstr='#fea700',GradientType=0 ); /* IE6-9 */
+	
+}
+
+
+
+
+/* -------------  Fonts ----------*/
+
+html, body, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {
+	margin: 0;
+	padding: 0;
+}
+body, td, a, select, input, textarea, button {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#302f2e;
+}
+body.jpn, .jpn div, .jpn td, .jpn p, .jpn a, .jpn select, .jpn input, .jpn textarea {
+	font-family:Arial, Helvetica, "ＭＳ Ｐゴシック", Osaka, sans-serif;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+
+a,a:visited{
+   	color: #E35D00;
+	font-weight:bold;
+}
+a:hover {
+    text-decoration: none;
+}
+a img {
+    border: 0 none;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;;
+}
+
+
+
+
+
+
+
+/* --- Footer --- */
+#footer{
+	background-color:#e9b41b;
+	padding:15px 0px;
+	color:black;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	
+}
+#footer p{
+	font-size:11px;
+	color:black;
+	margin-right:5px;
+}
+#footer p.links{
+	margin:0px;
+}
+
+#footer p.legal-information{
+	margin: 5px 0 0;
+	color: white;
+}
+
+#footer p.links a,#footer p.links a:visited{
+	color:black;
+	font-size:12px;
+	margin-right:20px;
+	line-height:20px;
+	text-decoration:underline;
+	font-weight:normal;
+	display:inline-block;/*to avoid links being cut by spaces inside*/
+}
+#footer p.links a:hover{
+	text-decoration:none;	
+}
+#footer div.contact-us{
+	float:right;
+	height: 28px;
+}
+#footer .contact-us .part1{
+	float:left;
+	background: transparent url('images/contact-us.png') no-repeat ;
+	height: 28px;
+	width:10px;
+	text-align:center;
+}
+#footer .contact-us .part2{
+	float:left;
+	background-color:white;
+	height: 28px;	
+}
+#footer .contact-us a{
+	color:inherit;
+	font-weight:bold;
+	padding:5px 10px 0 0;	
+	display:block;
+	text-decoration:none;
+}
+
+/* --- End of the footer --- */
+
+/* --- Legal documents --- */
+.legal-document p{
+	margin:10px 0 20px;
+}
+h1,h2,h3,h4{
+	margin:5px 0 5px;
+	color:#E35D00;
+}
+ol.list-fees{
+	list-style-type:lower-alpha;
+	margin:0;
+	padding:0 0 0 40px;
+}
+ol.list-fees li{
+	padding:0;
+}
+/* --- End of legal documents --- */
+
+
+
+
+	
+/* Action buttons */
+
+/* Yellow button used for main actions : save, process, save... */
+.action1{
+	color:black;
+	font-weight:bold;
+	border:solid 2px #f1b704;
+	
+	background: #ffdd84; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffdd84 0%, #ffbf2b 30%, #ffbd24 31%, #ffbd24 51%, #ffe610 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffdd84), color-stop(30%,#ffbf2b), color-stop(31%,#ffbd24), color-stop(51%,#ffbd24), color-stop(100%,#ffe610)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffdd84 0%,#ffbf2b 30%,#ffbd24 31%,#ffbd24 51%,#ffe610 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffdd84 0%,#ffbf2b 30%,#ffbd24 31%,#ffbd24 51%,#ffe610 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffdd84 0%,#ffbf2b 30%,#ffbd24 31%,#ffbd24 51%,#ffe610 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffdd84 0%,#ffbf2b 30%,#ffbd24 31%,#ffbd24 51%,#ffe610 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFe610', endColorstr='#FFaf07',GradientType=0 ); /* IE6-9 */	
+}
+
+/* Black button used for cancel actions : ... */	
+.action2{
+	color:white;
+	border:solid 2px #666666;
+	background-color:#424242;
+	font-weight:bold;
+	background: -moz-linear-gradient(center top , #000000 0%,#666666 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(top, #000000 0%,#666666 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#666666',GradientType=0 ); /* IE6-9 */	
+}
+
+
+/* For div, span and a tags used as buttons */
+.action1,a.action1,
+.action2,a.action2{
+	cursor:pointer;
+	text-align:center;
+	padding:5px 30px;
+}
+/* <a> links used as buttons, overwrite previous rules */
+a.button{
+	text-decoration:none;
+	margin:0px 0px;
+}
+
+a.action1{
+	color:black;
+}
+a.action2{
+	color:white;
+}
+
+
+/* For input type="button" and input type="submit" */
+input.action1,input.action2{
+	padding:5px 30px;
+}
+input.search{
+	padding:1px 5px;
+	margin: 0px 10px;
+}
+.button.icon{
+	padding: 0 5px;
+}
+.icon-search{
+	background: transparent url('images/search15x15.png') no-repeat ;
+	height:15px;
+	width:15px;
+}
+
+.ajax-spinner{
+	background: transparent url('images/spinner.gif') no-repeat ;
+	display:none;
+	width:16px;
+	height:16px;
+
+}
+.msg-error{
+	margin:10px 0;
+    background-color: #900;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+	display:none;
+}
+.msg-error a{
+    color: white;
+    font-weight: bold;
+}
+
+td input.search-postalcode{
+	padding:2px 5px;
+	margin-left:5px;
+}
+
+/* 2 classes used to display Ajax results */
+.ajax-result-ok{
+	background-color:#3a8104;
+	color:white;
+	font-weight:bold;
+	margin: 10px 0;
+	padding: 5px 10px;
+	display:none;
+}
+.ajax-result-error{
+	margin:10px 0;
+	background-color: #900;
+	color: white;
+	font-weight: bold;
+	padding: 5px 10px;
+	display:none;
+}
+.ajax-result-error a{
+	color:white;
+}
+
+/* login validation */
+div.error-arrow{
+	position:absolute;
+	width:500px/*a width is needed, otherwise the arrow is broken*/
+}
+div.error-arrow div.left {
+    background: url("images/validation/field-error-arrow-left.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 34px;
+    width: 19px;
+}
+
+div.error-arrow div.msg {
+    background: url("images/validation/field-error-arrow-middle.png") repeat-x scroll 0 0 transparent;
+    color: white;
+	font-weight:bold;
+    float: left;
+    height: 32px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 200px;
+    padding-right: 5px;
+    padding-top: 2px;
+    text-align: center;
+}
+
+div.error-arrow div.right {
+    background: url("images/validation/field-error-arrow-right.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 34px;
+    width: 9px;
+}
+/* end of login form validation */
+
+.yen-symbol-after{
+	display:none;
+}
+.jpn .yen-symbol-before{
+	display:none;
+}
+.jpn .yen-symbol-after{
+	display:inline;
+}
+
+
+/* To avoid printing decoration elements such as header, menus, buttons, footer... */
+@media print{
+	.noprint{
+		display:none;
+	}
+	.loggedin-user #main-content {
+		margin-left:0px;/* to cancel margin-left:-250px*/
+	}
+	.loggedin-user #main-wrapper .centered {
+    	margin-top: 0px;/* to cancel margin-top:-60px*/
+	}
+}
+
+/* 
+
+Footer links content, when displayed in a standalone page 
+
+*/
+#legal-document{
+    background-color: #FFFFFF;
+    margin: 2px 0 15px;
+    padding: 20px;
+}
+.legal-document a{
+    color: black;
+    font-weight: normal;
+}
+
+/* 
+
+Footer links content, when displayed in popup windows
+
+*/
+.legal-document h1,.legal-document h2,.legal-document h3,.legal-document h4{
+    color: #E35D00;
+    margin: 5px 0;
+}
+.legal-document h1{
+	font-size:20px;
+}
+.legal-document h2{
+	fint-size:16px;
+    border-bottom: 1px solid #E35D00;
+    margin: 10px 0;
+    padding-bottom: 5px;
+}
+
+
+/* Some classes useful to add some graphic effects
+ and to avoid repeating eveywhere the same CSS instructions */
+
+/* Make round corners */
+.ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+/* Make a drop shadow effect */
+.ui-shadow{
+-webkit-box-shadow: 1px 1px 5px #A3A29F;
+-moz-box-shadow: 1px 1px 5px #A3A29F;
+box-shadow: 1px 1px 5px #A3A29F;
+}
+.ui-gradient-silver{
+	background: -moz-linear-gradient(center top , #ffffff 0%,#b9b9b9 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(top, #ffffff 0%,#b9b9b9 100%); 
+}
+
+.ui-helper-reset {
+    border: 0 none;
+    font-size: 100%;
+    line-height: 1.3;
+    list-style: none outside none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    text-decoration: none;
+}
+	
+::-webkit-input-placeholder{
+  color: #999999;
+}
+input:-moz-placeholder{  
+  color: #999999;  
+}

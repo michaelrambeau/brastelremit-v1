@@ -1,0 +1,1374 @@
+﻿/*
+Styles of the main content of the IMT Customer pages, for ANONYMOUS users
+Last update Michael@Osaka 2013-08-07 (counter banner for mac)
+*/
+
+@font-face {
+      font-family: "HelveticaNeue";
+	  src: url('fonts/helvetica/3_roman-condensed.eot?') format('eot'), url('fonts/helvetica/HelveticaNeueLTStd-BdCn.otf') format('truetype');
+}
+
+
+div#language-switcher{
+	position:absolute;
+	right:0px;
+	top:65px;
+}
+
+/* Horizontal menu (home / how it works / fees...) */
+#menu-horizontal{
+	top:105px;
+	position:absolute;
+}
+
+
+#menu-horizontal ul, #menu-horizontal ul li{
+    float: left;
+    line-height: 32px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-horizontal ul li a{
+	color: #302F2E;
+    display: block;
+    float: left;
+	width:160px;
+	text-align:center;
+    padding: 1px;/* used to display a kind of border by using 2 div  */
+    text-decoration: none;
+	margin-left:4px;/* used to separate the menu elements, overridden for for home element */
+    font-size: 12px;
+}
+#menu-horizontal ul li a.home{
+	margin-left:0;/*override the previous margin for the first elements */
+}
+
+
+
+
+/* gradient declaration */
+#menu-horizontal ul li a .button-inner{
+	display:block;
+	background: #ffe610; /* Old browsers */
+		
+	background: -moz-linear-gradient(top,  rgba(252,236,65,1) 0%, rgba(255,218,53,1) 30%, rgba(255,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,236,65,1)), color-stop(30%,rgba(255,218,53,1)), color-stop(100%,rgba(255,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(252,236,65,1) 0%,rgba(255,218,53,1) 30%,rgba(255,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(252,236,65,1) 0%,rgba(255,218,53,1) 30%,rgba(255,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(252,236,65,1) 0%,rgba(255,218,53,1) 30%,rgba(255,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(252,236,65,1) 0%,rgba(255,218,53,1) 30%,rgba(255,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcec41', endColorstr='#ffbc00',GradientType=0 ); /* IE6-9 */
+	
+}
+#menu-horizontal ul li a:hover .button-inner,
+#menu-horizontal ul li.selected a .button-inner{
+	color:black;
+
+	background: -moz-linear-gradient(top,  rgba(252,243,146,1) 0%, rgba(255,247,216,1) 49%, rgba(249,239,129,1) 51%, rgba(255,206,71,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,243,146,1)), color-stop(49%,rgba(255,247,216,1)), color-stop(51%,rgba(249,239,129,1)), color-stop(100%,rgba(255,206,71,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(252,243,146,1) 0%,rgba(255,247,216,1) 49%,rgba(249,239,129,1) 51%,rgba(255,206,71,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(252,243,146,1) 0%,rgba(255,247,216,1) 49%,rgba(249,239,129,1) 51%,rgba(255,206,71,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(252,243,146,1) 0%,rgba(255,247,216,1) 49%,rgba(249,239,129,1) 51%,rgba(255,206,71,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(252,243,146,1) 0%,rgba(255,247,216,1) 49%,rgba(249,239,129,1) 51%,rgba(255,206,71,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9EF81', endColorstr='#FCF392',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+/*border of the buttons */
+#menu-horizontal  ul li a{
+	background: rgb(255,255,222); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,222,1) 0%, rgba(255,217,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,222,1)), color-stop(100%,rgba(255,217,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,222,1) 0%,rgba(255,217,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,222,1) 0%,rgba(255,217,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,222,1) 0%,rgba(255,217,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,222,1) 0%,rgba(255,217,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffde', endColorstr='#ffd900',GradientType=0 ); /* IE6-9 */
+}
+
+#menu-horizontal  ul li.selected a,
+#menu-horizontal  ul li a:hover{	
+}
+
+/* end of the gradient definitions */
+
+
+/* We use a span element because there is already a background (gradient) on the parent element */
+span.icon-home{
+	width:19px;
+	height:19px;
+	position:absolute;
+	top: 6px;
+	left: 8px;
+	background-image:url('images/home.png');
+}
+	
+a.home img{
+	vertical-align:bottom;
+	position:absolute;
+	left:10px;
+	top:3px;
+	}
+
+
+/* The white tab used to display the main content */
+.tab-white{
+	width:581px;
+}	
+.tab-white div.title{
+	background:transparent url('images/tabs/tab-white-top.gif') no-repeat;
+	height:24px;
+	padding:10px 0px 0px 10px;
+	color:#424242;
+	font-size:14px;
+	font-weight:bold;
+	}
+.tab-white .middle{
+	background:transparent url('images/tabs/tab-white-middle.gif') repeat-y;
+	padding:0px 10px 0px 10px;
+	}
+.tab-white .bottom{
+	background:transparent url('images/tabs/tab-white-bottom.gif') no-repeat;
+	}
+
+/* End of the white tab*/
+
+/* The container for the big picture in the main home page */
+div.carousel{
+	position:relative;
+	margin-bottom: 10px;
+	width:576px;
+}
+.carousel img{
+	margin-top:3px;/*to adjust horizontal alignment with left side*/
+}
+
+
+/* --- The left column and its content --- */
+/* --- Actions buttons ----*/
+
+a.side-button{
+	display:block;
+	text-align:center;
+	text-decoration:none;
+}
+.side-button-text1{
+	color:black;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.side-button-text2{
+	color:white;
+	font-size:14px;
+	display:block;
+}
+.button-signin,.button-registration{
+	text-align:center;
+	padding:10px 0px;
+	font-size:16px;
+}
+.button-signin a,.button-registration a{
+	color:black;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.button-signin{	
+	line-height:40px;
+	border: solid 1px #F46903;
+	
+	background-color:#f1b704;
+	
+	background: -moz-linear-gradient(top,  rgba(255,152,2,0.7) 0%, rgba(251,133,2,1) 40%, rgba(244,105,3,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,152,2,0.7)), color-stop(40%,rgba(251,133,2,1)), color-stop(100%,rgba(244,105,3,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,152,2,0.7) 0%,rgba(251,133,2,1) 40%,rgba(244,105,3,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,152,2,0.7) 0%,rgba(251,133,2,1) 40%,rgba(244,105,3,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,152,2,0.7) 0%,rgba(251,133,2,1) 40%,rgba(244,105,3,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,152,2,0.7) 0%,rgba(251,133,2,1) 40%,rgba(244,105,3,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ff9802', endColorstr='#f46903',GradientType=0 ); /* IE6-9 */
+
+}
+
+.button-signin:hover{
+
+	background: -moz-linear-gradient(top,  rgba(255,152,2,0.5) 0%, rgba(246,114,3,1) 80%, rgba(244,105,3,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,152,2,0.5)), color-stop(80%,rgba(246,114,3,1)), color-stop(100%,rgba(244,105,3,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,152,2,0.5) 0%,rgba(246,114,3,1) 80%,rgba(244,105,3,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,152,2,0.5) 0%,rgba(246,114,3,1) 80%,rgba(244,105,3,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,152,2,0.5) 0%,rgba(246,114,3,1) 80%,rgba(244,105,3,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,152,2,0.5) 0%,rgba(246,114,3,1) 80%,rgba(244,105,3,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff9802', endColorstr='#f46903',GradientType=0 ); /* IE6-9 */
+
+}
+
+.button-registration{
+	
+	border: solid 1px #FFbc00;
+	
+	background: -moz-linear-gradient(top,  rgba(255,227,0,0.7) 0%, rgba(255,211,0,1) 40%, rgba(255,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,227,0,0.7)), color-stop(40%,rgba(255,211,0,1)), color-stop(100%,rgba(255,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,227,0,0.7) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,227,0,0.7) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,227,0,0.7) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,227,0,0.7) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffe300', endColorstr='#ffbc00',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.button-registration:hover{
+	background: -moz-linear-gradient(top,  rgba(255,227,0,0.5) 0%, rgba(255,196,0,1) 80%, rgba(255,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,227,0,0.5)), color-stop(80%,rgba(255,196,0,1)), color-stop(100%,rgba(255,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffe300', endColorstr='#ffbc00',GradientType=0 ); /* IE6-9 */
+	
+}
+
+#side .block{
+	padding:10px;
+	background-color:#ffffff;
+	margin:3px 0 10px;
+}
+
+/*for browsers that do not know the shadow effect, add a border */
+.ie8 .block.ui-shadow{
+	border:solid 1px #ececec;
+}
+#side .block hr{
+	margin:4px 0;
+	visibility:hidden;
+}
+#side .buttons h2{
+	font-size:12px;
+	color:white;
+	background-color:#424242;
+	padding:2px 5px;
+	font-weight:normal;
+	margin:0 0 5px 0;
+	border-style: none;
+}
+
+div.button .line2{
+	color:white;
+	font-weight:bold;
+	font-size:14px;
+}
+/* end of the #side */
+
+/* Fonts attibutes of the main home page */
+
+table.news th{
+		vertical-align:top;
+}
+table.news td,table.news th{
+	padding:10px;
+}
+table.news p.content{
+	display:none;
+	margin:5px 0 10px;
+}
+table.news a.title{
+	color:#E35D00;
+	text-decoration:none;
+}
+table.news a.title:hover{
+	text-decoration:underline;
+}
+
+/* white block used in home pages (except main home page) */
+.whitebox{
+	background-color: white;
+	margin:20px 0px;
+	padding:25px;
+	min-height:500px;
+	position:relative;
+}
+.orangebox{
+	padding:10px;
+	margin-top:15px;
+	background-color:#fcf4db;
+}
+
+h1,h2,h3,h4{
+		color:#E35D00;
+}
+h1{
+	font-size:22px;
+	margin:0;
+	font-weight:bold;	
+}
+h2{
+	font-size:20px;
+	padding-bottom: 5px;
+	margin: 25px 0 15px;
+	font-weight:normal;
+}
+.fees h2,.rates h2{
+	border-bottom: solid 1px #E35D00;
+}
+.orangebox h3{
+	margin-bottom:5px;
+}
+
+/*
+
+=======
+How it works page
+======
+
+*/
+.howitworks .side-right{
+	width:200px;
+}
+.howitworks .steps,.corporate-application .steps{
+	width:550px;	
+}
+.corporate-application .steps{
+	margin: 0 auto;
+}
+.howitworks .arrow,.corporate-application .arrow{
+	margin:10px 0;
+	height:20px;
+	background:transparent url('images/arrow-orange-top-to-bottom.png') no-repeat center;	
+}
+.steps .title{
+	background-color: #E35D00;
+	color:white;
+	font-weight:bold;
+	padding: 5px 10px;
+}
+
+.howitworks a.corporate-application{
+	display:block;
+	text-align:right;
+	margin-top:20px;
+}
+
+.howitworks h3{
+	margin-bottom:3px;
+}
+.howitworks h4{
+	border-bottom: dashed 1px #E35D00;
+	padding:3px 0;
+}
+.howitworks ul{
+	padding-left:20px;
+	margin:10px;	
+}
+.steps .title p span{ 
+	vertical-align:middle;
+}
+
+.steps .content{ 
+	margin-top:10px;	
+}
+
+.steps .content p{ 
+	margin-top:10px;
+}
+.steps .content .text{
+	padding-left:120px;
+	line-height:18px;
+	position: relative;	
+}
+.howitworks .steps .title p{
+	margin-left:110px;
+}
+.steps .title p.center{
+	text-align:center;
+	margin-left:0;
+}
+
+hr.spacer{
+	clear:both;
+	visibility:hidden;
+	margin:0;
+	height:0;
+}
+
+hr{
+	border-width: 0;
+	border-top:  solid 1px #E35D00;
+	height:10px;
+}
+
+.block-orange-border{
+	margin:10px 0;
+	border: solid 1px #E35D00;
+	padding:10px;
+}
+.block-orange-border p.with-margin{
+	margin:10px 0;
+}
+.howitworks table.examples{
+	width:100%;
+}
+.howitworks .examples td{
+	width:50%;
+	padding:5px;
+}
+.howitworks .examples p.big{
+	font-size:20px;
+	margin:20px 0 0 70px;
+}
+.howitworks div.substraction{
+	padding:5px 0;
+}
+.howitworks div.substraction p,.howitworks div.subtotal p{
+	margin:0;
+}
+.small, .small a{
+	font-size:12px;
+}
+.howitworks p.small{
+	margin: 20px 0 10px;
+}
+.howitworks p.amount{
+	color: #E35D00;
+	font-weight:bold;
+	margin:0;
+}
+.howitworks .subtotal{
+	border-top:solid 1px #E35D00;
+	padding-top:10px;
+}
+.howitworks .country-list{
+	margin-top:50px;
+	padding:0 10px;
+}
+.howitworks p.small{
+	margin-top:20px;
+}
+.howitworks .country{
+	clear:both;
+	margin:20px 0;
+}
+.howitworks .country p{
+	padding:5px 0 0 50px;
+	font-weight:bold;
+	font-size:16px;
+}
+.corporate-application h2{
+	color:#424241;
+	font-size:14px;
+	border-style: none;
+}
+h3.notes{
+	margin-top: 30px;
+}
+
+ul.notes{
+	padding-left: 15px;
+	margin:0;
+}
+
+ol{
+	padding-left: 20px;
+	margin:0;
+}
+ol li{
+	padding-top: 10px;
+}
+
+ul.notes li{
+	padding-top:3px;
+	font-size:12px;
+}
+
+.howitworks h2{
+	margin-top:10px;
+	border-style:none;
+}
+/*
+
+=======
+Fees & Restrictions page
+======
+
+*/
+
+
+.fees h3{
+	font-size: 14px;
+	color: black;
+	margin: 10px 0 2px;
+}
+.fees p.small{
+	font-size:0.9em;
+	margin : 10px 0  15px;
+}
+
+/* Table remittance-amount / fee value : centered in the page */
+table.fees,table.restrictions{
+    margin: 10px 0 0;
+}
+table.destinations{
+	width:100%;
+	margin:0 0 10px;
+}
+.fees .date{
+	font-size:10px;
+	text-align:right;
+}
+.fees th,.fees td,.destinations td{
+	font-size:16px;
+	border:solid 1px #302F2E;
+	padding:5px 20px;
+}
+
+
+
+table.fees th,table.destinations th{
+	background-color:#e3e3e2;
+}
+
+table.fees td.amount{
+	text-align:left;
+	font-weight:bold;
+	background-color:#FCF4DB;
+
+}
+table.fees td.fee-value{
+	text-align:right;
+	font-weight:bold;
+	color:#E35D00;
+}
+
+table.restrictions td,table.restrictions th{
+	font-size:16px;
+	text-align:center;
+	padding: 10px;
+	border: solid 1px black;
+}
+table.restrictions td{
+	color:#E35D00;
+	font-weight:bold;
+    text-align: right;
+}
+table.restrictions th{
+	font-size:16px;
+	text-align:left;
+}
+table.restrictions tr.first th{
+	background-color: #E3E3E2;
+	width:180px;
+	text-align:center;
+}
+table.restrictions th{
+	background-color: #FCF4DB;
+}
+
+.destinations th{
+	padding: 5px 0;
+}
+.destinations td{
+	padding: 5px 5px;
+}
+.destinations tr.odd td{
+	background-color:#FCF4DB;	
+}
+.destinations .country{
+	font-weight:bold;
+}
+.destinations .working-hours,
+.destinations .limit
+{
+	font-size:14px;
+	text-align:center;
+}
+.destinations .currency{
+	margin-right:2px;
+}
+.destinations .limit{
+	width:150px;	
+}
+.destinations .delivery-methods th{
+	background-color:white;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/*
+==============
+forgot password form
+==============
+*/
+.forgot-password #main-wrapper .centered {
+	width: 600px;
+}
+.forgot-password-block{
+	
+	padding:20px;
+	width:400px;
+	margin: 40px auto;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #c8c8c8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#c8c8c8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* W3C */
+}
+.forgot-password-block h2{
+	font-size:18px;
+	color:white;
+	background-color:#424242;
+	padding:2px 5px;
+	font-weight:bold;
+	margin: 0;	
+}
+
+.forgot-password-block input{
+    border-style: none;
+    padding: 2px 0 2px 5px;
+    width: 206px;
+}
+.forgot-password-block select{
+    border-color: white;
+    padding: 0;
+	border-style: solid;
+}
+
+
+table.forgot-password{
+	margin-top:10px;
+}
+table.forgot-password th,table.forgot-password td{
+	padding: 8px 0px;
+}
+table.forgot-password th{
+	width: 140px;
+	text-align:right;
+	vertical-align:baseline;
+	text-align:left;
+}
+
+div.confirm-buttons {
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: center;
+}
+input.error, select.error, span.error {
+    border: 2px solid #ed4136;
+}
+label.error {
+    background: url("images/error_icon.png") no-repeat scroll 0 5px transparent;
+    color: #ed4136;
+    padding: 6px 25px;
+	font-size:14px;
+	display:block;
+}
+span.error {
+    padding: 4px;
+}
+
+/* the message board (news form the wordpress site) and the help page */
+.feedWrapper {
+	position:relative;
+	overflow:auto;
+}
+.loading{
+	position:absolute;
+	top:25%;
+	left:50%;
+}
+.feedWrapper p {
+	margin-bottom:5px;
+}
+
+.feedWrapper .feed .pubDate {
+	width:80px;
+}
+.feedWrapper span.ctgy {
+	padding-right:10px;
+}
+#helpFeed {
+	margin:20px 0 0 0;
+	padding:0 0 0 10px;
+	min-height:400px;
+}
+.feed td{
+	vertical-align:top;
+}
+.feed .index {
+	width:25px;
+}
+
+
+#helpFeed .feed .txt:hover {
+	text-decoration:underline;
+	color:#E35D00;
+}
+#helpFeed .feed .title .content {
+	margin: 5px 0 10px;
+}
+.msgFeedWrapper {
+	background-color:#F5F5F5;
+	padding-bottom:5px;
+}
+.msgFeedTitle {
+	padding:0 20px;
+	line-height:30px;
+	border-bottom:1px dotted #CCC;
+}
+#msgFeed {
+	height: 150px;
+	padding:10px;
+	overflow-y:scroll;
+	background-color:#FFF;
+}
+#msgFeed * {
+	font-size:12px;
+}
+#msgFeed table{
+	width:100%;
+}
+#msgFeed td{
+	padding: 5px 2px;
+}
+#helpFeed td{
+	padding: 0 0 5px;
+}
+#msgFeed .feed {
+	padding-bottom:5px;
+}
+
+#msgFeed .title .txt,
+#helpFeed .title .txt{
+	color:#E35D00;
+	font-weight:bold;
+}
+#msgFeed .clickable,
+#helpFeed .clickable{
+	cursor: pointer;
+}
+
+#msgFeed tr:hover{
+	background-color:#FEEFD9;
+}
+#msgFeed tr.selected:hover{
+	background-color:#FEFBF5;
+}
+#msgFeed .feed .title .content{
+	margin: 5px 0 10px;
+}
+span.ctgy.Important {
+	font-weight:bold;
+}
+
+/* end of the message board css */
+
+/* maintenance block inserted above the footer (2012-03-09) */
+.maintenance-block{
+	clear:both;
+	background-color:#F5F5F5;
+	font-size:12px;
+	font-weight:normal;
+	text-align:center;
+	margin: 10px 0;
+	padding: 10px	
+}
+
+/* 
+
+New calculator page 2012-05
+
+*/
+.calculator-page .steps{
+	margin-top:10px;
+}
+.calculator-page .steps td{
+	width:240px;
+}
+.calculator-page .steps th{
+	text-align:left;
+	font-weight:bold;
+	padding:0 0 5px;
+}
+
+.calculator-page table.steps td{
+	width:220px;
+	vertical-align:middle;
+}
+.calculator-page .steps td.arrow{
+	width:33px;
+}
+.calculator-page .step{
+	background-color:#FCF4DB;
+	margin:5px 0;
+	padding:0 10px;	
+	height:180px;
+}
+.calculator-page .step .yellow-block{
+	background-color:#ffd229;
+	padding:5px;
+}
+.calculator-page #cell1 .currency{
+	padding:3px 5px;
+	display:none;
+}
+.calculator-page #cell2 .yellow-block{
+	margin-top:10px;
+}
+.calculator-page #cell2 .delivery-block{
+	margin-top:0;
+}
+.calculator-page #cell3 .yellow-block{
+	text-align:right;
+	margin: 5px 0;
+}
+.yellow-block select{
+	width:100%;
+	border: solid 1px white;
+	padding: 2px;
+	border-color:white；
+}
+.yellow-block .enter-deposit,.yellow-block .enter-delivery{
+	margin-top:5px;
+}
+.yellow-block .branch-container{
+	margin-top:5px;
+}
+#delivery-time-container{
+	margin: 5px 2px;
+}
+.calculator-page .arrow{
+	padding:0;
+	background:transparent url('images/arrow-orange-left-to-right.png') no-repeat center;	
+}
+.calculator-page input{
+	border-style:none;
+	width:200px;
+	padding:2px 5px;
+	background-color:white;
+}
+.calculator-page #cell3 input{
+    font-size: 18px;
+	color:black;
+	width:140px;
+	ime-mode: disabled;
+}
+.calculator-page .yen-mark,.calculator-page .yellow-block .foreign-symbol{
+    font-size: 20px;
+    font-weight: bold;
+	margin-right:5px;
+}
+.calculator-results{
+	margin: 50px auto;
+}
+/* for jquery ui autocomplete compoment 2012-04-12 */
+.ui-autocomplete a{
+	font-weight:normal;
+}
+.disabled,.disabled#cell3 input{
+	color:#CCCCCC;
+}
+.step.disabled{
+	background-color:#fefcf4;
+}
+.step.disabled .yellow-block{
+	background-color:#fff2bf;
+}
+.calculator-page .disabled,.disabled .left-to-right {
+	background-image:none;
+}
+.calculator-results td,.calculator-results th{
+	border-bottom: solid 1px grey;
+	padding:5px 15px;
+}
+.calculator-results tbody th{
+	text-align:left;
+	font-weight:normal;
+}
+table.calculator-results td{
+	text-align:right;
+	font-weight:bold;
+	width:150px;
+}
+.calc-error{
+    background-color: #E35D00;
+    color: white;
+    display: none;
+    font-weight: bold;
+	margin:10px 0;
+    padding: 5px 10px;
+}
+/* loading gif used in the main homepage */
+.loading{
+	margin: 20px 0;
+	text-align:center;
+}
+/*cashback campaign*/
+.carousel .button-learn-more{
+	position:absolute;
+	bottom:18px;
+	right:18px;
+	width:160px;
+	height:33px;	
+}
+.eng .carousel .button-learn-more,
+.tag .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_eng.png");
+	width:159px;
+	height:32px;
+}
+.jpn .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_jpn.png");
+	width:214px;
+	height:37px;
+}
+.nep .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_nep.png");	
+}
+.mal .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_mal.png");
+}
+.vie .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_vie.png");
+}
+.ind .carousel .button-learn-more{
+	background-image: url("images/home_buttons/learn_more_ind.png");
+}
+.carousel .button-learn-more:hover{
+	background-position:bottom;
+}
+
+.carousel-nav span{
+	position:absolute;
+	top:130px;
+	width:60px;
+	height:100px;
+	background-image: url("images/carousel/arrows.png");
+	display:none;
+}
+.carousel-nav span:hover{
+	background-position:bottom;
+}
+.carousel:hover .carousel-nav span{
+	visibility:visible;
+	display:inline-block;
+}
+.previous-slide span{
+	left:-10px;
+}
+.next-slide span{
+	right:-10px;	
+	background-position: 100% 0;
+}
+.previous-slide span:hover{
+	background-position: 0 100%;
+}
+.next-slide span:hover{
+	background-position: 100% 100%;
+}
+/*Brastel Renit Couner page*/
+/*.counters h1{
+	margin-bottom: 15px;
+}*/
+.counters h2{
+	font-size:20px;
+	clear: both;
+	margin: 25px 0 15px;
+	background-color: #fcf7e3;
+	padding:2px 10px;
+	border-style:none;
+}
+.counters p{
+	margin: 15px 0 10px;
+	line-height:20px;
+}
+
+.counters img.intro{
+	margin: 0 0 25px 25px;
+}
+.counters img.building-small{
+	margin: 25px 25px 0 0;
+}
+.counters img.building-small.last{
+	margin-right: 0;
+}
+.counters ul li{
+	margin-top: 10px;
+	list-style-image: url('images/list_bullet.png');
+}
+p.assistance-jap{
+	margin-left: 240px;
+}
+.counter-info{
+	margin-left: 264px;	
+}
+/*table used to display data about country, languages...*/
+table.data-list{
+	margin-top:10px;
+}
+.data-list tr.odd td{
+	background-color:#FCF7E3;
+}
+.data-list td,.data-list th{
+	border: solid 1px #302F2E;
+	padding:5px 10px;
+	line-height:20px;
+}
+.data-list th{
+	background-color:#e3e3e2;
+}
+.data-list td.first{
+	color:#E35D00;
+	font-weight: bold;
+	font-size: 16px;
+}
+.data-list th{
+	background-color:#e3e3e2;
+}
+.data-list td.available{
+	text-align:center;
+	font-size:20px;
+	padding:0;
+}
+/* dialogboxes used in How it works page */
+.dialog{
+	padding:15px;
+}
+.dialog h2{/*title of the popup*/
+	margin:0 0 15px;
+	font-size:22px;
+	border-style:none;
+	font-weight:bold;
+}
+.dialog h3, h3.important{
+	margin: 25px 0 15px;
+	border-bottom: solid 1px #E35D00;
+	padding-bottom:5px;
+}
+.dialog h3.first{
+	margin-top: 0
+}
+.dialog p,.dialog ul{
+	margin:0 0 15px;
+	line-height:18px;
+}
+.dialog ul{
+	padding-left: 20px;
+}
+#verification-methods-popup .right-column{
+	margin-left: 210px;
+}
+#deposit-methods-popup .right-column{
+	margin-left: 150px;
+}
+		
+a.mailto{
+	font-weight:normal;
+}
+a.mailto:hover{
+	text-decoration:none;
+}
+.action-button{
+	background: -moz-linear-gradient(top,  rgba(255,227,0,1) 0%, rgba(255,211,0,1) 40%, rgba(255,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,227,0,1)), color-stop(40%,rgba(255,211,0,1)), color-stop(100%,rgba(255,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,227,0,1) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,227,0,1) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,227,0,1) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,227,0,1) 0%,rgba(255,211,0,1) 40%,rgba(255,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffe300', endColorstr='#ffbc00',GradientType=0 ); /* IE6-9 */
+	
+}
+.action-button:hover{
+	background: -moz-linear-gradient(top,  #feed76 0%, rgba(255,196,0,1) 80%, rgba(255,188,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,227,0,0.5)), color-stop(80%,rgba(255,196,0,1)), color-stop(100%,rgba(255,188,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #feed76 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #feed76 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,227,0,0.5) 0%,rgba(255,196,0,1) 80%,rgba(255,188,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffe300', endColorstr='#ffbc00',GradientType=0 ); 
+}
+.action-button{
+	text-decoration: none;
+	padding:5px 20px;
+	color: black;
+	border: 1px solid #FFBC00;
+	text-align: center;
+}
+.action-button:visited{
+	color:black;
+}
+.action-button span{
+	text-decoration:none;
+}
+.action-button .line1{
+	font-size:12px;
+	font-weight:normal;
+	line-height:14px;
+	color:black;
+}
+.mal .action-button .line1{
+	/*font-size:9px;*/
+	font-weight:normal;
+	line-height:14px;
+	color:black;
+}
+
+.action-button .line2{
+	font-size:18px;	
+	font-weight:bold;
+	line-height:18px;
+	color:black;
+}
+.jpn .action-button .line2{
+	font-size:16px;	
+}
+#button-counter{
+	position:absolute;
+	bottom: 10px;
+	right: 20px;
+}
+
+.slide{
+	position:relative;
+}
+
+.slide a{
+	display:block;/*required to solve some align problems in FF*/
+}
+
+/*Style used only for the banner about "Brastel Remit Counter"*/
+.slide-counter p.bottom{
+	position: absolute;
+	bottom:10px;
+	left:20px;
+	color: white;
+	font-size:18px;	
+	width: 320px;
+}
+.jpn .slide-counter p.bottom{
+	font-weight:bold;
+}
+.nep .slide-counter p.bottom{
+	line-height:24px;
+}
+.vie .slide-counter p.bottom{
+	font-size:15px;
+	bottom:16px;
+	font-weight:bold;
+}
+
+.slide-counter p.title{
+	position: absolute;
+	top:5px;
+	font-size:60px;	
+	left:0;
+	text-align:center;
+	width:100%;
+	font-weight:bold;
+	font-family:"HelveticaNeue","Trebuchet MS";
+	color:#E35D00;
+}
+.jpn .slide-counter p.title{
+	font-size:38px;
+	top:20px;
+}
+.vie .slide-counter p.title{/*decrease font-size for Vietnamese (long content)*/
+	font-size:36px;
+	top:10px;
+	font-family:inherit;
+}
+.nep .slide-counter p.title{/*move upwards content for Nepalese ???*/
+	line-height:75px;
+}
+
+.slide-counter .open-mark{
+	width:90px;
+	text-align:center;
+	top:105px;
+	right:20px;
+	position:absolute;
+	color: white;
+	font-weight:bold;
+	font-size:24px;
+	-moz-transform:rotate(20deg);	
+	-webkit-transform:rotate(20deg);
+	-ms-transform:rotate(120deg);	
+}
+
+.ind .slide-counter .open-mark,
+.mal .slide-counter .open-mark
+{
+	font-size:20px;
+	top:110px;
+}
+.nep .slide-counter .open-mark{
+	line-height:28px;
+}
+/*Adjustments for Mac users (fonts are too big in Japanese!) */
+.jpn.mac .slide-counter p.title {
+   font-size:36px;
+}
+.jpn.mac .slide-counter p.bottom {
+   font-size:16px;
+}
+.jpn.mac .action-button .line2 {
+   font-size:14px;
+}
+
+
+/*end of the style for Brastel Remit Counter*/
+
+.map-info-window a{/*googlemaps infowindow*/
+	font-weight:normal;
+	margin-top:5px;
+	display:block;
+}
+.jpn #menu-horizontal a span{
+	font-size:14px;
+	font-weight:bold;
+	}
+	
+/*Exchange rates page*/	
+p.intro{
+	margin-top:20px;
+}
+.country-container{
+	width:400px;
+	background-color: #FCF4DB;
+	margin: 20px auto;
+	padding: 15px 20px 10px;
+}
+.country-container table{
+	width:100%;
+}
+.country-container label.country{
+	margin-right:10px;
+	font-weight:bold;
+}
+.country-container .currency{
+	margin:5px 5px 0;
+}
+.country-container select{
+	width:100%;
+	margin: 0;/*needed because of Chrome*/
+}
+.rates-page .yellow-block{
+	background-color:#ffd229;
+	padding: 5px;
+}
+.rates-container{
+	margin:20px auto;
+	display:table;/*to center horizontally the block in the page when using margin auto*/
+}
+.rates-container .last-update{
+	margin-top:10px;
+}
+.rates td,.rates th{
+	padding: 5px;
+	border-bottom: solid 1px grey;
+}
+th.special-column{
+	background-color:#fdd300;
+}
+th.regular-column{
+	background-color:#e6e7e8;
+}
+.rates td{
+	font-weight:bold;
+	width:160px;
+	text-align:right;
+	padding-right: 10px;
+}
+td.special-column{
+	background-color:#faf3d3;
+}
+td.regular-column{
+	background-color:#f0f1f1;
+}
+.rates tbody th{
+	font-weight:normal;
+	text-align: left;	
+}
+#special-rates-button{
+	margin:20px auto;
+	display:table;
+}
+#special-exchange-rates img{
+	margin-bottom: 10px;
+	text-align:center;
+	border: solid 3px grey;
+}
+
+/*Exchange rates block in the homepage*/
+.block-rates{
+	position:relative;	
+}
+.block-rates .title{
+	font-weight:bold;
+	top: 5px;
+	width:160px;
+	position:absolute;
+	vertical-align:bottom;
+	display:table-cell;
+	text-align:center;
+	margin-left:-5px;
+}
+.block-rates .title1{
+	font-size:34px;
+}
+.block-rates .title2{
+	font-size:17px;
+}
+
+.jpn .block-rates .title{
+	top:10px;
+}
+.jpn .block-rates .title1{
+	font-size:26px;
+}
+.jpn .block-rates .title2{
+	font-size:26px;
+	line-height:20px;
+}
+
+
+
+.ind .block-rates .title,.mal .block-rates .title{
+	top:10px;
+}
+.ind .block-rates .title2,.mal .block-rates .title2{
+	font-size:21px;
+	line-height:20px;
+}
+.mal .block-rates .title2{
+	font-size:26px;
+}
+
+.nep .block-rates .title1{
+	font-size:32px;
+}
+.nep .block-rates .title2{
+	font-size:18px;
+}
+.vie .block-rates .title{
+	top:13px;
+
+}
+.vie .block-rates .title2{
+	font-size:18px;
+}
+.vie .block-rates .title1{
+	font-size:32px;
+	line-height:30px;
+}
+
+
+.block-rates .action-button{
+	display: block;
+	margin: 20px 0 0;
+}
+/*end of the code for exchange rates block*/

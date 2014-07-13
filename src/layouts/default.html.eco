@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Welcome to Brastel Remit! - Brastel Remit Remittance Service</title>
+  <meta name="description" content="Brastel Remit is an international money transfer service from Japan. Registration is free and remittance requests can be made online anytime." />
+  <link rel="stylesheet" type="text/css" href="css/common.css?v1.2" />
+  <link rel="stylesheet" type="text/css" href="css/home.css?v1.2" />
+  <link rel="stylesheet" type="text/css" href="css/switcher.css?v1.2" />
+  <script type="text/javascript" src="js/jquery/jquery-1.8.2.min.js">/**/</script>
+  <script src="../js/common/imt_plugins.js?v1.2" type="text/javascript">/**/</script>
+  <script src="../js/common/imt_tools.js?v1.2" type="text/javascript">/**/</script>
+  <link href="../css/imt.css?v1.2" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/common/imt_external_common.js?v1.2">/**/</script>
+  <script type="text/javascript" src="js/home/switcher.js?v1.2">/**/</script>
+  <script type="text/javascript" src="js/home/home_main.js?v1.2">/**/</script>
+  <script type="text/javascript" src="/js/home/home_common.js?v1.2">/**/</script>
+  <script type="text/javascript">
+    var lang = "eng";
+    var acr = "4";
+    var IP = "";
+    var xslFile = "home_main.xsl";
+    var wimsURL = "http://brastelremit.jp/web/WIMS/Manager.aspx?Style=1&Service=1";
+    var imgRoot = "img";
+    //URL (port and hostname) of the Customer site
+    var configURLCustomer = "";
+    //URL (port and hostname) of the main site (for anonymous users)
+    var configURLCommon = "";
+  </script>
+
+  <script>
+		//Enabled languages
+		var languages=[];
+		
+			languages.push({
+				acr:"3",
+				lang:"jpn",
+				text:"日本語"
+			});
+		
+			languages.push({
+				acr:"4",
+				lang:"eng",
+				text:"English"
+			});
+		
+			languages.push({
+				acr:"16",
+				lang:"ind",
+				text:"Bahasa Indonesia"
+			});
+		
+			languages.push({
+				acr:"17",
+				lang:"mal",
+				text:"Bahasa Malaysia"
+			});
+		
+			languages.push({
+				acr:"20",
+				lang:"nep",
+				text:"Nepali"
+			});
+		
+			languages.push({
+				acr:"5",
+				lang:"tag",
+				text:"Tagalog"
+			});
+		
+			languages.push({
+				acr:"15",
+				lang:"vie",
+				text:"Vietnamese"
+			});
+		</script>
+  </head>
+    
+  <body class="eng home home-main">
+    
+    <div id="header" class="noprint">
+      <div id="top-right-corner"><!-- --></div>
+      <div class="banner">
+        <div class="centered">
+          <a href="/eng/home">
+            <img class="logo" src="img/logo/brastel_remit_299x37_8bits.png" alt="Brastel Remit logo" width="299" height="37" />
+          </a>
+          <div id="language-switcher"><!-- --></div>
+          <div id="menu-horizontal">
+            <ul>
+              <li class="selected">
+                <a class="home ui-corner-all ui-shadow" href="index.html">
+                  <span class="button-inner ui-corner-all">
+                    <span class="icon-home"><!-- --></span>
+                    <span>HOME</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="ui-corner-all ui-shadow" href="howitworks.html">
+                  <span class="button-inner ui-corner-all">HOW IT WORKS</span>
+                </a>
+              </li>
+              <li>
+                <a class="ui-corner-all ui-shadow" href="fees.html">
+                  <span class="button-inner ui-corner-all">FEES</span>
+                </a>
+              </li>
+              <li>
+                <a class="ui-corner-all ui-shadow" href="simulator.html">
+                  <span class="button-inner ui-corner-all">SIMULATOR</span>
+                </a>
+              </li>
+              <li>
+                <a class="ui-corner-all ui-shadow" href="help.html">
+                  <span class="button-inner ui-corner-all">HELP</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <%- @content %>
+      
+    <div id="footer" class="noprint">
+      <div class="centered">
+        <div class="contact-us">
+          <div class="part1"> </div>
+          <div class="part2">
+            <a href="/eng/inquiry">CONTACT US</a>
+          </div>
+        </div>
+        <p class="links">
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_terms_conditions.xsl&amp;action=GetRemittanceRules#legal-document">Terms and Conditions</a>
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_privacy_policy.xsl#legal-document">Privacy Policy</a>
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_antisocial_forces_statement.xsl#legal-document">Statement of Anti-Social Forces</a>
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_regulations.xsl#legal-document">Remittance Regulations</a>
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_declaration_antisocial_forces.xsl#legal-document">Declaration Against Anti-Social Forces</a>
+          <a href="/web/WIMS/Manager.aspx?Style=1&amp;Service=1&amp;acr=4&amp;xslFile=footer_electronic_delivery.xsl#legal-document">Electronic Delivery</a>
+        </p>
+        <p class="legal-information">Brastel Co., Ltd. | 130-0015 Tokyo-to, Sumida-ku, Yokoami 2-6-2 | Copyright ©2011 Brastel Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+      
+      <% if @document.js: %>
+        <% for file in @document.js : %>
+          <script src="js/<%= file %>"></script>
+        <% end %>
+      <% end %>
+        
+        
+    </body>
+    
+    
+    
+</html>

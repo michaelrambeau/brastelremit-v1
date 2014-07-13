@@ -1,0 +1,188 @@
+/* 
+CSS file used by login and first login forms
+Last version: Michael@Osaka 2012-03-09
+*/
+#login-block{
+	padding:20px;
+	width:350px;
+	margin: 40px auto 20px;
+	position: relative;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #c8c8c8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#c8c8c8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ffffff 0%,#c8c8c8 100%); /* W3C */
+}
+
+#login-block,#login-block td{
+		font-size:1.2em;
+}
+
+#first-login-block{
+	padding:30px;
+	width:500px;
+	margin: 40px auto;
+	background-color:white;
+}
+
+#first-login-block th{
+	width:auto;
+	vertical-align:middle;
+}
+#first-login-block td.field{
+	width:170px;
+}
+#first-login-block input{
+	font-size:20px;
+	width: 150px;
+}
+
+#login-block h2{
+	font-size:20px;
+	color:white;
+	background-color:#424242;
+	padding:2px 5px;
+	font-weight:bold;
+	margin: 0;	
+}
+#first-login-block ul{
+	padding-left: 15px;
+	font-size:12px;
+}
+
+#button-signin{
+	float:right;
+	margin: 0;
+	color:black;
+	font-size:16px;	
+	padding:10px;
+	cursor:pointer;
+	border: solid 2px #f46903;
+	font-weight:bold;
+	
+	background: #ff9802; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff9802 0%, #f46903 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9802), color-stop(100%,#f46903)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff9802 0%,#f46903 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff9802 0%,#f46903 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ff9802 0%,#f46903 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9802', endColorstr='#f46903',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ff9802 0%,#f46903 100%); /* W3C */
+	
+}
+#login-block input, #login-block  td input{
+	font-size:18px;
+}
+input#username,input#password{
+	width: 340px;
+	padding: 2px 0px 2px 5px;
+	margin-bottom:5px;
+	border-style:none;
+}
+label.fieldname{
+	display:block;
+	margin-top:10px;
+	font-size:16px;
+	font-weight:bold;
+	}
+p{
+	margin:10px 0px;
+	}
+a#forgot{
+	color:#DF7B04;
+	display:block;
+	text-align: left;
+	font-size:13px;
+	font-weight:bold;
+	/*margin-top:20px;*/
+	clear:both;
+	}	
+div.error-msg{
+	background-color:#C4161C;
+	width:434px;
+	padding:2px 10px;
+	margin:2px 0px;
+	color:white;
+	display:none;
+	}
+/*input.error{
+	border: solid 2px #9B1B1E;
+	}	*/
+div.password{
+	margin:10px 0;
+	}
+
+.login-error-msg{
+    background-color: #C4161C;
+	margin-top: 10px;
+	font-weight:bold;
+    color: #FFFFFF;
+    display: none;
+    font-size: 16px;
+    padding: 7px 0;
+    text-align: center;
+}
+#loading {
+    display: none;
+	text-align:center;
+}
+
+
+/* Legal information agreement (used for temporaty users login) */
+#legal-info .block {
+    background-color: #FFFFFF;
+    border: 1px solid #C6C5C1;
+    margin: 2px 0 15px;
+    padding: 20px;
+}
+#legal-info .block ul{
+	padding-left:15px;
+	margin:0;
+}
+#legal-info .block ul li{
+	margin-bottom: 3px;
+}
+
+#legal-info .loading {
+    padding: 50px;
+    text-align: center;
+}
+#legal-info p.confirmation{
+	font-size: 16px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:30px;
+}
+
+.legal-document h1 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.legal-document h2, .legal-document h3 {
+    font-size: 14px;
+}
+
+.block .legal-document-content {
+    height: 200px;
+    overflow: auto;
+    padding-right: 10px;
+}
+#legal-info .block.first {
+    margin-bottom: 50px;
+}
+
+/* maintenance block added below the login block on 2012-03-09 */
+.login .maintenance-block{
+	width: 372px;
+	background-color:#F5F5F5;
+	font-size:12px;
+	font-weight:normal;
+	text-align:left;
+	margin: 0 auto 20px;
+	padding: 5px 10px;
+}

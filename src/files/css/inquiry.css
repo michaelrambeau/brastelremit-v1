@@ -1,0 +1,127 @@
+/*
+CSS used by both home_inquiry.xsl and home_inquiry.xsl pages
+Last update: Michael@Osaka 2012-02-24
+*/
+.home-inquiry #main-wrapper .centered{	
+	width:560px;
+}
+.inquiry h1{
+	margin:0 0 10px;
+	font-size:20px;
+}
+.inquiry h2{
+	font-size:16px;
+	padding:0;
+}
+.inquiry h2.with-margin{
+	margin-top:20px;
+}
+.inquiry p{
+	margin-bottom :10px;	
+}
+.inquiry .orangebox p.box-title{
+	font-weight:bold;
+	margin-bottom :10px;	
+}
+.inquiry .orangebox{
+    margin-top: 15px;
+    padding: 10px;
+	background-color: #FCF4DB;
+}
+.orangebox table{
+	width:100%;
+}
+.inquiry .orangebox p{
+	margin-bottom:2px;
+}
+
+.phone-number{
+	font-weight:bold;
+	color:#E35D00;
+}
+
+.inquiry th,.inquiry td{
+    padding: 5px 0px;
+    vertical-align: top;
+	font-weight:normal;
+}
+.inquiry th{
+	width:250px;
+	text-align:left;
+}
+.inquiry tr.first th,.inquiry tr.first td{
+    padding-top:0;
+}
+.inquiry tr.last th,.inquiry tr.last td{
+    padding-bottom:0;
+}
+
+
+
+div.confirm-buttons {
+    margin: 10px 0 0;
+    padding: 10px 0;
+    text-align: center;
+	position:relative;
+}
+.confirm-buttons .ajax-spinner {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+button{
+    margin-right: 10px;
+}
+
+input.text, textarea{
+    border-style: none;
+    color: black;
+    padding: 2px 5px;
+	width:95%;/* 100%-width would make the input overlap the container */
+}
+input.required, textarea.required, select.required,div.required-fields{
+	border: solid 1px #E35D00;
+}
+div.required-fields{
+	width:30px;
+	margin-right:5px;
+	float:left;
+}
+
+select {
+    border: 1px solid white;
+    width: 100%;
+}
+/* for radio-buttons */
+label.radio{
+	margin: 0 10px 0 2px;
+}
+/* validation plugin : invalid fields */
+label.error {
+    color: #ED4136;
+    padding: 2px 0;
+	background-image:none;
+}
+input.error, select.error, span.error,textarea.error{
+    border: 1px solid #ED4136;
+}
+.reference-number-block{
+	text-align:center;
+	font-size:20px;
+}
+.inquiry-method{
+	margin:0 10px 0 0;
+	width:230px;
+	border: solid 1px #E28619;
+	padding:10px;
+	background-color:#fbfde7;
+}
+.inquiry-method p{
+	margin: 8px 0;
+	font-size:14px;
+	font-weight:bold;
+}
+.small{
+	font-size:12px;
+}

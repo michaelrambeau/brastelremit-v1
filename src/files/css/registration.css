@@ -1,0 +1,322 @@
+@charset "utf-8";
+/* 
+CSS of the Registration process pages
+Last update: Michael@Osaka 2013-13-22
+*/
+.registration .centered{
+	width: 880px;/* overrides the setting in common.css */
+}
+.registration #header .centered{
+	background-image: none;
+}
+
+#main-wrapper{
+	margin-bottom:20px;/*overwrites the margin from common.css (no footer in the registration pages)*/
+}
+#content{
+	margin-top:30px;
+}
+#header h1{ 
+	position:absolute;
+	right:0px;
+	top:50px;
+	color:#302F2E;
+}
+#header img.logo{ 
+	position:absolute;
+	left:0px;
+	top:50px;
+}
+
+#menu-registration{
+	position:absolute;
+	bottom:0px;
+}
+
+#menu-registration .tab{
+	/*display:inline-block;*/
+	float:left;
+	margin:0;
+	height:36px;
+}
+#menu-registration .tab .tab-text{
+	font-size:12px;
+	color:black;
+	font-weight:bold;
+	display:block;/*inline-block;*/
+	float:left;
+	width:140px;
+	text-align:center;
+	padding-top:10px;
+	height:26px;/* =image.height - block.padding */
+}
+#menu-registration .tab .tab-image{
+	background: transparent url('images/tabs/registration_current_tab.png') no-repeat;
+	width:23px;
+	height:36px;
+	/*display:inline-block;*/
+	float:right;
+	display:none;
+}
+
+#menu-registration .tab.current .tab-text,
+#menu-registration .tab.previous .tab-text{
+	background-color:#eeece5;/*#dcd9d0;	*/
+}
+p.instruction{
+	font-size:16px;
+	font-weight:bold;
+	margin: 10px 0;
+	}
+.block p.instruction{
+	margin: 0 0 10px;
+}
+#content .block{
+	padding:20px;
+	background-color:#ffffff;
+	border:solid 1px #c6c5c1;
+	margin:2px 0px 15px 0px;
+}
+.step1 #content .block.first{
+	margin-bottom:50px;
+}
+
+.block ul{
+	padding-left: 15px;
+	margin: 10px 0;
+}
+.block ul li{
+	margin-bottom: 3px;
+}
+.step3 .block ul{
+	padding-left:20px;
+}
+
+.legal-document h1{
+	font-size:16px;	
+	margin-top:0;
+}
+.legal-document h2,.legal-document h3{
+	font-size:14px;	
+}
+/* The text blocks of the step 1 have a limited height, so we had scrollbars if needed */
+.step1 .block{
+
+}
+.step1 .block .legal-document-content{
+	max-height:200px;	
+	overflow:auto;	
+	padding-right:10px;
+}
+.step1 .loading{
+	text-align: center;
+	padding: 50px;
+	
+}
+
+.step2 #main-wrapper .centered{
+	width:650px;/* overwrite the width of the centered block */
+}
+
+.step3 #main-wrapper .centered {
+    width: 650px;
+}
+
+.step2 #content .block{
+	padding:20px;
+	margin-bottom:30px;
+}
+
+div.confirm-buttons{
+	margin:10px 0px 10px 0px;
+	text-align:center;
+}
+.confirm-buttons input, .confirm-buttons .button {
+    margin-right: 20px;
+}
+div.confirm-buttons p{
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 0px;
+}
+
+div.field-group{
+	background-color:#e3e3e2;
+	margin:5px 0px 5px 0px;
+	}
+	
+div.field-group table{
+	width:100%;
+	}	
+div.field-group td,
+div.field-group th,
+div.data-confirmation td,
+div.data-confirmation th
+{
+	padding:5px 10px;
+}	
+div.field-group tr.first td,
+div.field-group tr.first th,
+div.data-confirmation tr.first td,
+div.data-confirmation  tr.first th
+{
+	padding-top: 10px;
+}
+div.field-group tr.last td,
+div.field-group tr.last th,
+div.data-confirmation tr.last td,
+div.data-confirmation  tr.last th
+{
+	padding-bottom: 10px;
+}	
+
+div.field-group th,div.data-confirmation th{
+	width:180px;
+	text-align:left;
+}	
+
+/* Step2 : Email authentication */
+.step2 td.button{
+	width:100px;	
+}
+
+
+.step2 input.text{
+	width:220px;
+}
+.step2 .field-group td.field{
+	width:260px;
+}
+
+input.text,input.postalcode1,input.postalcode2{
+	border-style:none;
+	padding:3px 5px;
+}
+
+
+.step3 td.comment{
+	width:auto;	
+	color:#888888;
+	padding-left:0;
+	padding-right:0;
+	
+}
+.step3 td.comment.field-validation-error{
+	vertical-align:bottom;/* move the cell content to the bottom, to avoid overlapping the icon */
+}
+div.field-group td.field{
+	width:310px;	
+}
+.step3 input.text{
+	width:300px;
+}
+.step3 select.large-content{
+	width:310px;/*310px;*/
+}
+.step3 select.small-content{
+	width:200px;/*310px;*/
+}
+.step3 div.field-group{
+	margin: 0px 0px 20px;
+	}
+.data-confirmation{
+    background-color: #FBF3D2;
+    margin: 0 0 20px 0;
+}	
+.step3 div.field-group.last{
+	margin: 0;
+	}	
+.step3 input.japanPhoneNumberMethod{
+	width:190px;
+}
+	
+/* Radio buttons (step 5, ID verification)*/	
+div.radio{
+	margin-bottom:5px;	
+}	
+	
+div.radio label{
+	color: #E35D00;
+    font-size: 16px;
+	font-weight:bold;
+	padding-left:5px;
+}
+/* step 6 confirmation */
+#content div.finish{
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 30px;
+	margin:50px 0px;
+}
+p.thanks{
+	color: #E35D00;
+    font-size: 20px;
+	font-weight:bold;
+	margin: 20px 0px;
+	}
+.reference-number-wrapper{
+	text-align:center;
+	margin:30px 0px;
+}
+.reference-number-block{
+	background-color:#E35D00;
+	color:white;
+	font-size: 20px;
+	font-weight:bold;
+	padding:10px 20px;
+}
+
+span.radio-buttons label{
+	padding:0 10px 0 2px;
+}
+
+/* Form validation */
+td.comment.field-validation-error {
+	background: transparent url('images/error_icon.png') no-repeat 0px 8px;
+}
+tr.first td.comment.field-validation-error {
+	background-position: 0px 13px;
+}
+td.field label.field-validation-error,label.error{
+	/*margin-left:5px;*/
+	display:block;
+    color: #ed4136;
+}
+td.comment.valid{
+	background: transparent url('images/check_icon.png') no-repeat 0px center;
+
+}
+th.field-validation-error{
+    color: #ed4136;
+}
+input.field-validation-error,select.field-validation-error,span.field-validation-error,input.error{
+    border: 1px solid #ed4136;
+}
+span.field-validation-error{
+	padding:4px;
+}
+
+/* ------ */
+select{
+	border: 1px solid white;
+}
+
+
+#upload{
+	margin:10px;
+}
+#upload table td{
+	padding:5px;
+}
+
+.link{
+	margin: 20px 0;
+	text-align: center;
+}
+
+div.field-group td.postOfficeAccountNumber table td{
+    padding: 5px 0px;
+}
+.small{
+	font-size: 0.8em;
+}
