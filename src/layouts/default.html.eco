@@ -9,13 +9,13 @@
   <link rel="stylesheet" type="text/css" href="css/home.css?v1.2" />
   <link rel="stylesheet" type="text/css" href="css/switcher.css?v1.2" />
   <script type="text/javascript" src="js/jquery/jquery-1.8.2.min.js">/**/</script>
-  <script src="../js/common/imt_plugins.js?v1.2" type="text/javascript">/**/</script>
-  <script src="../js/common/imt_tools.js?v1.2" type="text/javascript">/**/</script>
-  <link href="../css/imt.css?v1.2" rel="stylesheet" type="text/css" />
+  <script src="js/common/imt_plugins.js?v1.2" type="text/javascript">/**/</script>
+  <script src="js/common/imt_tools.js?v1.2" type="text/javascript">/**/</script>
+  <link href="css/imt.css?v1.2" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/common/imt_external_common.js?v1.2">/**/</script>
   <script type="text/javascript" src="js/home/switcher.js?v1.2">/**/</script>
   <script type="text/javascript" src="js/home/home_main.js?v1.2">/**/</script>
-  <script type="text/javascript" src="/js/home/home_common.js?v1.2">/**/</script>
+  <script type="text/javascript" src="js/home/home_common.js?v1.2">/**/</script>
   <script type="text/javascript">
     var lang = "eng";
     var acr = "4";
